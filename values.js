@@ -92,7 +92,6 @@ var vm = new Vue({
         "Accomplishment",
         "Capable",
         "Challenge",
-        "Challenge",
         "Competence",
         "Credibility",
         "Determination",
