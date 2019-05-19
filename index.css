@@ -1,9 +1,9 @@
 body {
+    background-color: #F8FFF8;
+    color: #004000;
     font-family:'Roboto Mono', 'Arial', sans-serif;
     /* font-family: 'Courier New', Courier, monospace; */
     font-size: 16pt;
-    background-color: #F8FFF8;
-    color: #004000;
 }
 
 #main {

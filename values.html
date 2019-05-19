@@ -27,15 +27,16 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto Mono">
     <link rel="stylesheet" href="index.css" type="text/css"/>
 
     <style>
-      ul {
-          width: 100%;
-          max-width: 500px;
-          margin: 10px auto;
+      .value {
+        width: 100%;
+        max-width: 500px;
+        margin: 10px auto;
 
-          text-align: left;
+        text-align: left;
       }
     </style>
   </head>
@@ -48,268 +49,21 @@
 
       <h1>List of values</h1>
 
-      <h2>Integrity</h2>
-      <ul>
-        <li>Accountability</li>
-        <li>Candor</li>
-        <li>Commitment</li>
-        <li>Dependability</li>
-        <li>Dignity</li>
-        <li>Honesty</li>
-        <li>Honor</li>
-        <li>Responsibility</li>
-        <li>Sincerity</li>
-        <li>Transparency</li>
-        <li>Trust</li>
-        <li>Trustworthy</li>
-        <li>Truth</li>
-      </ul>
+      <div class="value">My values: <span v-for="value in checkedValues"> {{value}}</span></div>
 
-      <h2>Feelings</h2>
-      <ul>
-        <li>Acceptance</li>
-        <li>Comfort</li>
-        <li>Compassion</li>
-        <li>Contentment</li>
-        <li>Empathy</li>
-        <li>Grace</li>
-        <li>Gratitude</li>
-        <li>Happiness</li>
-        <li>Hope</li>
-        <li>Inspiring</li>
-        <li>Irreverent</li>
-        <li>Joy</li>
-        <li>Kindness</li>
-        <li>Love</li>
-        <li>Optimism</li>
-        <li>Passion</li>
-        <li>Peace</li>
-        <li>Poise</li>
-        <li>Respect</li>
-        <li>Reverence</li>
-        <li>Satisfaction</li>
-        <li>Serenity</li>
-        <li>Thankful</li>
-        <li>Tranquility</li>
-        <li>Welcoming</li>
-      </ul>
+      <div v-for="(category, name) in values">
+        <h2>{{name}}</h2>
+        <div v-for="value in category" class="value">
+          <input type="checkbox" :id="value" :value="value" v-model="checkedValues">
+          <label :for="value">{{value}}</label>
+        </div>
+      </div>
 
-      <h2>Spirituality</h2>
-      <ul>
-        <li>Adaptability</li>
-        <li>Altruism</li>
-        <li>Balance</li>
-        <li>Charity</li>
-        <li>Communication</li>
-        <li>Community</li>
-        <li>Connection</li>
-        <li>Consciousness</li>
-        <li>Contribution</li>
-        <li>Cooperation</li>
-        <li>Courtesy</li>
-        <li>Devotion</li>
-        <li>Equality</li>
-        <li>Ethical</li>
-        <li>Fairness</li>
-        <li>Family</li>
-        <li>Fidelity</li>
-        <li>Friendship</li>
-        <li>Generosity</li>
-        <li>Giving</li>
-        <li>Goodness</li>
-        <li>Harmony</li>
-        <li>Humility</li>
-        <li>Loyalty</li>
-        <li>Maturity</li>
-        <li>Meaning</li>
-        <li>Selfless</li>
-        <li>Sensitivity</li>
-        <li>Service</li>
-        <li>Sharing</li>
-        <li>Spirit</li>
-        <li>Stewardship</li>
-        <li>Support</li>
-        <li>Sustainability</li>
-        <li>Teamwork</li>
-        <li>Tolerance</li>
-        <li>Unity</li>
-      </ul>
-
-      <h2>Achievement</h2>
-      <ul>
-        <li>Accomplishment</li>
-        <li>Capable</li>
-        <li>Challenge</li>
-        <li>Competence</li>
-        <li>Credibility</li>
-        <li>Determination</li>
-        <li>Development</li>
-        <li>Drive</li>
-        <li>Effectiveness</li>
-        <li>Empower</li>
-        <li>Endurance</li>
-        <li>Excellence</li>
-        <li>Famous</li>
-        <li>Greatness</li>
-        <li>Growth</li>
-        <li>Hard work</li>
-        <li>Improvement</li>
-        <li>Influence</li>
-        <li>Intensity</li>
-        <li>Leadership</li>
-        <li>Mastery</li>
-        <li>Motivation</li>
-        <li>Performance</li>
-        <li>Persistence</li>
-        <li>Potential</li>
-        <li>Power</li>
-        <li>Productivity</li>
-        <li>Professionalism</li>
-        <li>Prosperity</li>
-        <li>Recognition</li>
-        <li>Results-oriented</li>
-        <li>Risk</li>
-        <li>Significance</li>
-        <li>Skill</li>
-        <li>Skillfulness</li>
-        <li>Status</li>
-        <li>Success</li>
-        <li>Talent</li>
-        <li>Victory</li>
-        <li>Wealth</li>
-        <li>Winning</li>
-      </ul>
-
-      <h2>Creativity</h2>
-      <ul>
-        <li>Creation</li>
-        <li>Curiosity</li>
-        <li>Discovery</li>
-        <li>Exploration</li>
-        <li>Expressive</li>
-        <li>Imagination</li>
-        <li>Innovation</li>
-        <li>Inquisitive</li>
-        <li>Intuitive</li>
-        <li>Openness</li>
-        <li>Originality</li>
-        <li>Uniqueness</li>
-        <li>Wonder</li>
-      </ul>
-
-      <h2>Enjoyment</h2>
-      <ul>
-        <li>Amusement</li>
-        <li>Enthusiasm</li>
-        <li>Experience</li>
-        <li>Fun</li>
-        <li>Playfulness</li>
-        <li>Recreation</li>
-        <li>Spontaneous</li>
-        <li>Surprise</li>
-      </ul>
-
-      <h2>Presence</h2>
-      <ul>
-        <li>Alertness</li>
-        <li>Attentive</li>
-        <li>Awareness</li>
-        <li>Beauty</li>
-        <li>Calm</li>
-        <li>Clear</li>
-        <li>Concentration</li>
-        <li>Focus</li>
-        <li>Silence</li>
-        <li>Simplicity</li>
-        <li>Solitude</li>
-      </ul>
-
-      <h2>Intelligence</h2>
-      <ul>
-        <li>Brilliance</li>
-        <li>Clever</li>
-        <li>Common sense</li>
-        <li>Decisiveness</li>
-        <li>Foresight</li>
-        <li>Genius</li>
-        <li>Insightful</li>
-        <li>Knowledge</li>
-        <li>Learning</li>
-        <li>Logic</li>
-        <li>Openness</li>
-        <li>Realistic</li>
-        <li>Reason</li>
-        <li>Reflective</li>
-        <li>Smart</li>
-        <li>Thoughtful</li>
-        <li>Understanding</li>
-        <li>Vision</li>
-        <li>Wisdom</li>
-      </ul>
-
-      <h2>Strength</h2>
-      <ul>
-        <li>Ambition</li>
-        <li>Assertiveness</li>
-        <li>Boldness</li>
-        <li>Confidence</li>
-        <li>Dedication</li>
-        <li>Discipline</li>
-        <li>Ferocious</li>
-        <li>Fortitude</li>
-        <li>Persistence</li>
-        <li>Power</li>
-        <li>Restraint</li>
-        <li>Rigor</li>
-        <li>Self-reliance</li>
-        <li>Temperance</li>
-        <li>Toughness</li>
-        <li>Vigor</li>
-        <li>Will</li>
-      </ul>
-
-      <h2>Freedom</h2>
-      <ul>
-        <li>Independence</li>
-        <li>Individuality</li>
-        <li>Liberty</li>
-      </ul>
-
-      <h2>Courage</h2>
-      <ul>
-        <li>Bravery</li>
-        <li>Conviction</li>
-        <li>Fearless</li>
-        <li>Valor</li>
-      </ul>
-
-      <h2>Order</h2>
-      <ul>
-        <li>Accuracy</li>
-        <li>Careful</li>
-        <li>Certainty</li>
-        <li>Cleanliness</li>
-        <li>Consistency</li>
-        <li>Control</li>
-        <li>Decisive</li>
-        <li>Economy</li>
-        <li>Justice</li>
-        <li>Lawful</li>
-        <li>Moderation</li>
-        <li>Organization</li>
-        <li>Security</li>
-        <li>Stability</li>
-        <li>Structure</li>
-        <li>Thorough</li>
-        <li>Timeliness</li>
-      </ul>
-
-      <h2>Health</h2>
-      <ul>
-        <li>Energy</li>
-        <li>Vitality</li>
-      </ul>
     </div>
 
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="values.js"></script>
   </body>
 </html>
