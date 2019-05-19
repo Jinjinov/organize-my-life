@@ -1,0 +1,30 @@
+body {
+    font-family:'Roboto Mono', 'Arial', sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 16pt;
+    background-color: #F8FFF8;
+    color: #004000;
+}
+
+#main {
+    text-align: center;
+    padding: 10px;
+}
+
+.text {
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px auto;
+
+    text-align: left;
+}
+
+li {
+    margin: 10px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 1813px;
+    border: 1px solid #004000;
+}
