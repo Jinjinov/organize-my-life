@@ -30,6 +30,8 @@ body {
 }
 
 button {
+    font-family: 'Roboto Mono', monospace;
+    
     background: #006000;
     border: none;
     color: #A0E0A0;
@@ -59,7 +61,7 @@ h1, h2 {
     padding: 10px 0px;
 
     background: linear-gradient(to right, rgba(0,64,0,0.05), rgba(0,64,0,0.5));
-    border-radius: 0 9999em 9999em 0;
+    border-radius: 9999em 9999em 9999em 9999em;
 }
 
 .text {
