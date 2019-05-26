@@ -23,20 +23,20 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#448AFF">
-    <meta name="apple-mobile-web-app-title" content="Organize my life">
-    <meta name="description" content="How to organize your life.">
+    <meta name="apple-mobile-web-app-title" content="How I organize my life">
+    <meta name="description" content="I collected and organized everything that helped me in the past 18 years.">
 
-    <title>Organize my life</title>
+    <title>How I organize my life</title>
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Organize my life" />
-    <meta property="og:description" content="How to organize your life." />
+    <meta property="og:title" content="How I organize my life" />
+    <meta property="og:description" content="I collected and organized everything that helped me in the past 18 years." />
     <meta property="og:image" content="https://how-to.organize-my.life/icon512x512.png" />
     <meta property="og:url" content="https://how-to.organize-my.life/" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Organize my life">
-    <meta name="twitter:description" content="How to organize your life.">
+    <meta name="twitter:title" content="How I organize my life">
+    <meta name="twitter:description" content="I collected and organized everything that helped me in the past 18 years.">
     <meta name="twitter:image" content="https://how-to.organize-my.life/icon512x512.png">
 
     <link rel="manifest" href="manifest.json">
@@ -44,8 +44,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto Mono">
-    <link rel="stylesheet" href="index.css" type="text/css"/>
+    <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto|Roboto Mono">
+    <link rel="stylesheet" href="index.css?v=0.1" type="text/css"/>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -54,12 +54,16 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div id="main">
-      <img src="icon128x128.png" alt="logo">
-      <h1>Organize my life</h1>
+      <div id="background"></div>
+      <img id="title" src="title.png" alt="How I organize my life">
+      <div class="text">
+        <p>I collected various lists that helped me organize my life in the past 18 years and I organized them into two tables. If this can benifit a single person, then making this website was worth it.</p>
+      </div>
+      <h1>How you can organize your life</h1>
       <div class="text">
         <p>If you want to function better, be more productive and goal oriented, you need a clear picture, a complete overview of your life - and the following two tables can help you towards that. By learning more about yourself and your habits you can discard things you don't need and work on things that benefit you.</p>
       </div>
-      <h2>Understand myself</h2>
+      <h2>How can I understand myself better</h2>
       <div class="text">
         <p><a href="#download">This table</a> will help you categorize your weaknesses and your strengths, so you can have solid starting points for further personal growth.</p>
         <ul>
@@ -76,8 +80,9 @@
           <li>tasks I have to do: (e.g. wash the dishes)</li>
         </ul>
       </div>
-      <iframe style="height:264px" frameBorder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false"></iframe>
-      <h2>My tasks & activities</h2>
+      <button onclick="toggle(this, 'table1')">Show table</button>
+      <iframe id="table1" style="display:none; height:264px" frameBorder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false"></iframe>
+      <h2>My tasks and activities</h2>
       <div class="text">
         <p><a href="#download">This table</a> will help you organize your tasks and activities and give you a good starting point for better time management.</p>
         <ul>
@@ -95,15 +100,35 @@
           <li>number of times I worked on this</li>
         </ul>
       </div>
-      <iframe style="height:1081px" frameBorder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pubhtml?gid=1631891333&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false"></iframe>
+      <button onclick="toggle(this, 'table2')">Show table</button>
+      <iframe id="table2" style="display:none; height:1081px" frameBorder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pubhtml?gid=1631891333&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false"></iframe>
       <h2 id="download">Download:</h2>
-      <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pub?output=pdf">pdf</a>
+      <span class="download">
+        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pub?output=pdf">pdf</a>
+      </span>
       <i class="far fa-file-pdf"></i>
-      <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pub?output=xlsx">xlsx</a>
+      <span class="download">
+        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pub?output=xlsx">xlsx</a>
+      </span>
       <i class="far fa-file-excel"></i>
-      <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pub?output=ods">ods</a>
+      <span class="download">
+        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqclwlYDz0aumBaLtMwjqZrxspFKj42d85_Rv7f-al009SmRDymCq2VwDcH-t6phiyzL8BDOnSy0Yt/pub?output=ods">ods</a>
+      </span>
       <div style="height: 40px"></div>
     </div>
+
+    <script>
+      function toggle(sender, id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          sender.innerHTML = "Hide table";
+        } else {
+          x.style.display = "none";
+          sender.innerHTML = "Show table";
+        }
+      }
+    </script>
 
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
 

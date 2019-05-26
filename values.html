@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139586901-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-139586901-3');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NPSG5L2');</script>
+    <!-- End Google Tag Manager -->
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
     <meta name="theme-color" content="#448AFF">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#448AFF">
-    <meta name="apple-mobile-web-app-title" content="Organize my life">
-    <meta name="description" content="How to organize your life.">
+    <meta name="apple-mobile-web-app-title" content="How I organize my life">
+    <meta name="description" content="I collected and organized everything that helped me in the past 18 years.">
 
-    <title>Organize my life</title>
+    <title>How I organize my life</title>
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Organize my life" />
-    <meta property="og:description" content="How to organize your life." />
+    <meta property="og:title" content="How I organize my life" />
+    <meta property="og:description" content="I collected and organized everything that helped me in the past 18 years." />
     <meta property="og:image" content="https://how-to.organize-my.life/icon512x512.png" />
     <meta property="og:url" content="https://how-to.organize-my.life/" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Organize my life">
-    <meta name="twitter:description" content="How to organize your life.">
+    <meta name="twitter:title" content="How I organize my life">
+    <meta name="twitter:description" content="I collected and organized everything that helped me in the past 18 years.">
     <meta name="twitter:image" content="https://how-to.organize-my.life/icon512x512.png">
 
     <link rel="manifest" href="manifest.json">
@@ -28,7 +44,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto Mono">
-    <link rel="stylesheet" href="index.css" type="text/css"/>
+    <link rel="stylesheet" href="index.css?v=0.1" type="text/css"/>
 
     <style>
       .value {
@@ -41,10 +57,17 @@
     </style>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPSG5L2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div id="main">
+
+      <div id="background"></div>
+
       <a href="./">
-        <img src="icon128x128.png" alt="logo">
+        <img id="title" src="title.png" alt="How I organize my life">
       </a>
 
       <h1>List of values</h1>

@@ -1,2 +1,2 @@
 # organize-my-life
-Organize my life
+How I organize my life
