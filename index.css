@@ -88,5 +88,7 @@ li {
 iframe {
     width: 100%;
     max-width: 1813px;
+    margin: 10px auto;
+    
     border: 1px solid #004000;
 }
